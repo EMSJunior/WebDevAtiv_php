@@ -1,18 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estados Brasileiros</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        .Bandeira{
+            width: 50px;
+        }
+        table {
+        border-collapse: collapse;
+        }
+
+        td, th {
+        border: 1px solid black;
+        padding: 8px;
+        }
+        
+    </style>
 </head>
 
 <body>
-    <header>
-
-    </header>
     <main>
+        <div class='desc'>
+            <h1>Estados Brasileiros</h1>
+        </div>
         <table>
             <?php
             $estados = array(
@@ -471,7 +488,7 @@
                     foreach ($estados as $dado) {
                         echo "<tr>";
 
-                        echo "<td><img src='{$dado['Bandeira']}' alt='Bandeira do {$dado['Unidade Federativa']}'></td>";
+                        echo "<td><img src='{$dado['Bandeira']}' class='Bandeira' alt='Bandeira do {$dado['Unidade Federativa']}'></td>";
                         
                         
                         echo "<td>{$dado['Unidade Federativa']}</td>";
